@@ -4,7 +4,7 @@
 
 - 👨‍💻 &nbsp; Explorando novas tecnologias e desenvolvendo soluções em Ciência de Dados.
 - 🎓 &nbsp; Formado no **MBA em Data Science e Analytics** na <a href="https://mbauspesalq.com/">USP/ESALQ</a>.
-- 💼 &nbsp; Trabalhando como **Especialista em Planejamento - Foco em Dados** na <a href="lebesfinanceira.com.br">Lebes Financeira</a>
+- 💼 &nbsp; Trabalhando como **Especialista em Planejamento - Foco em Dados** na <a href="https://www.lebesfinanceira.com.br">Lebes Financeira</a>
 - 🌱 &nbsp; Aprendendo mais sobre **R, Python, Data Science**.
 
 <h3> :rocket: &nbsp;Minhas Skills </h3>
