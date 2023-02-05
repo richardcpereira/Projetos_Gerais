@@ -2,9 +2,9 @@
 
 <h3> 👨‍💼 &nbsp;Sobre mim </h3>
 
-- 👨‍💻 &nbsp; Explorando novas tecnologias e desenvolvendo soluções de software.
-- 🎓 &nbsp; Estudando **MBA em Data Science e Analytics** na <a href="https://mbauspesalq.com/">USP/ESALQ</a>.
-- 💼 &nbsp; Trabalhando como **Especialista em Planejamento e Dados** na <a href="lebesfinanceira.com.br">Lebes Financeira</a>
+- 👨‍💻 &nbsp; Explorando novas tecnologias e desenvolvendo soluções em Ciência de Dados.
+- 🎓 &nbsp; Formado no **MBA em Data Science e Analytics** na <a href="https://mbauspesalq.com/">USP/ESALQ</a>.
+- 💼 &nbsp; Trabalhando como **Especialista em Planejamento - Foco em Dados** na <a href="lebesfinanceira.com.br">Lebes Financeira</a>
 - 🌱 &nbsp; Aprendendo mais sobre **R, Python, Data Science**.
 
 <h3> :rocket: &nbsp;Minhas Skills </h3>
