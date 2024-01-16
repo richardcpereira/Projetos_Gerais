@@ -1,0 +1,443 @@
+ ---------------------------
+
+Funções de Manipulação de Dados no SAS:
+
+CATX: Concatena valores de variáveis com um separador especificado.
+TRIM: Remove espaços em branco extras de uma string.
+SCAN: Extrai palavras individuais de uma string.
+SUBSTR: Extrai uma parte de uma string com base na posição e no comprimento.
+UPCASE/LOWCASE: Converte texto para maiúsculas ou minúsculas.
+
+COMPRESS: Remove caracteres específicos de uma string.
+
+INPUT/PUT: Converte valores de e para diferentes formatos de dados.
+Funções Estatísticas:
+
+MEANS/SUMMARY: Calcula estatísticas descritivas, como média, mediana, mínimo, máximo, etc.
+
+CORR: Calcula a matriz de correlação entre variáveis.
+
+REG: Realiza análises de regressão linear.
+LOGISTIC: Realiza análises de regressão logística.
+
+FREQ: Calcula tabelas de frequência e realiza testes qui-quadrado.
+
+UNIVARIATE: Calcula estatísticas univariadas, como curtose e assimetria.
+
+ANOVA: Realiza análises de variância.
+Funções de Data/Tempo:
+
+DATEPART: Extrai partes de uma data, como dia, mês e ano.
+
+INTNX: Calcula datas futuras ou passadas com base em intervalos.
+
+FORMAT: Formata datas e horas de acordo com um formato específico.
+Funções de Controle de Fluxo:
+
+IF/THEN/ELSE: Realiza condicionais para executar ações com base em critérios.
+
+DO/END: Controla loops e iterações.
+
+SELECT/CASE: Executa ações diferentes com base em valores específicos.
+
+Procedimentos para Gráficos e Relatórios:
+
+PROC GPLOT: Gera gráficos de dispersão e de linhas.
+
+PROC SGPLOT: Gera gráficos de barras, caixas, dispersão, entre outros.
+
+PROC REPORT: Cria relatórios tabulares personalizados.
+
+PROC EXPORT: Exporta dados para diferentes formatos, como Excel, CSV, etc
+
+Concatenar campos no SAS.
+
+Para concatenar dois campos no SAS Enterprise Guide, você pode usar a função CATX ou usar um operador de concatenação (&). Aqui estão exemplos de ambas as abordagens:
+
+Usando a função CATX:
+Suponha que você tenha duas variáveis chamadas "PrimeiroNome" e "Sobrenome" e queira concatená-las em uma única variável chamada "NomeCompleto". Você pode fazer o seguinte:
+
+sas
+Copy code
+data SeuDataSet;
+  set SeuDataSet; /* Substitua SeuDataSet pelo nome do seu conjunto de dados */
+  NomeCompleto = catx(' ', PrimeiroNome, Sobrenome);
+run;
+Neste exemplo, a função CATX concatena os valores de "PrimeiroNome" e "Sobrenome" com um espaço em branco como separador e armazena o resultado na variável "NomeCompleto".
+
+Usando o operador de concatenação (&):
+Outra maneira de fazer isso é usar o operador de concatenação (&). Veja como você pode fazer isso:
+
+sas
+Copy code
+data SeuDataSet;
+  set SeuDataSet; /* Substitua SeuDataSet pelo nome do seu conjunto de dados */
+  NomeCompleto = PrimeiroNome || ' ' || Sobrenome;
+run;
+Neste exemplo, usamos o operador "||" para concatenar os valores de "PrimeiroNome" e "Sobrenome", juntamente com um espaço em branco, e armazenamos o resultado na variável "NomeCompleto".
+
+Lembre-se de substituir "SeuDataSet" pelo nome do seu conjunto de dados real e ajustar os nomes das variáveis de acordo com o seu caso específico.
+
+Principais  comandos para SAS Enterprise,  fazendo consultas e transformação de dados 
+
+Para realizar consultas e transformações de dados no SAS Enterprise Guide, você pode usar uma combinação de ações na interface gráfica e códigos SAS. Aqui estão alguns dos principais comandos e ações que você pode usar para esse fim:
+
+Importação de dados: Importe seus dados de fontes externas, como arquivos CSV, Excel, bancos de dados SQL, etc. Use o assistente de importação ou código SAS para isso.
+
+Visualização de dados: Utilize as visualizações interativas para explorar seus dados e identificar padrões antes de fazer transformações. Gráficos e tabelas dinâmicas são úteis.
+
+Filtros: Aplique filtros para extrair apenas os dados relevantes para a sua análise. Isso pode ser feito usando a opção "Filtrar e Classificar" na janela de dados.
+
+Ordenação: Ordene seus dados com base em uma ou mais colunas usando a opção "Ordenar" na janela de dados.
+
+Agrupamento e agregação: Use a ação "Resumo" para agrupar dados por uma ou mais variáveis e realizar agregações, como soma, média, mínimo, máximo, etc.
+
+Criação de variáveis calculadas: Crie novas variáveis com base em cálculos ou transformações em variáveis existentes. Você pode fazer isso usando a ação "Calcular Campo" ou escrevendo código SAS na janela de código.
+
+Mesclagem de dados: Combine conjuntos de dados usando a ação "Mesclar Tabelas" para realizar junções, como inner, left, right ou full outer join.
+
+Transposição de dados: Transforme dados de formato largo para longo (ou vice-versa) usando a ação "Transpor".
+
+Subconjuntos de dados: Crie subconjuntos de dados com base em condições específicas usando a ação "Filtrar e Classificar" ou escrevendo código SAS.
+
+Reshape de dados: Reorganize a estrutura de seus dados usando a ação "Redimensionar" para pivotar ou unpivotar dados.
+
+Divisão de dados: Divida seus dados em grupos com base em critérios específicos usando a ação "Dividir".
+
+Renomeação de variáveis: Renomeie variáveis usando a ação "Renomear Campos" ou escrevendo código SAS.
+
+Alteração de tipos de dados: Modifique os tipos de dados das variáveis conforme necessário usando a ação "Definir Tipos de Dados" ou código SAS.
+
+Exportação de dados transformados: Exporte os dados após realizar as transformações para usá-los em outras análises ou relatórios.
+
+Lembrando que, no SAS Enterprise Guide, você pode combinar ações visuais na interface gráfica com código SAS personalizado para realizar transformações e consultas de dados avançadas. O uso de código SAS oferece flexibilidade adicional para realizar tarefas personalizadas e avançadas.
+
+Listagem das principais  funções para SAS Enterprise,  como a CATX
+
+ChatGPT
+No SAS Enterprise Guide, além da função CATX, existem muitas outras funções e procedimentos que podem ser usados para manipular dados, calcular estatísticas e realizar análises avançadas. Aqui estão algumas das principais funções e procedimentos:
+
+Funções de Manipulação de Dados:
+
+CATX: Concatena valores de variáveis com um separador especificado.
+TRIM: Remove espaços em branco extras de uma string.
+SCAN: Extrai palavras individuais de uma string.
+SUBSTR: Extrai uma parte de uma string com base na posição e no comprimento.
+UPCASE/LOWCASE: Converte texto para maiúsculas ou minúsculas.
+COMPRESS: Remove caracteres específicos de uma string.
+INPUT/PUT: Converte valores de e para diferentes formatos de dados.
+Funções Estatísticas:
+
+MEANS/SUMMARY: Calcula estatísticas descritivas, como média, mediana, mínimo, máximo, etc.
+CORR: Calcula a matriz de correlação entre variáveis.
+REG: Realiza análises de regressão linear.
+LOGISTIC: Realiza análises de regressão logística.
+FREQ: Calcula tabelas de frequência e realiza testes qui-quadrado.
+UNIVARIATE: Calcula estatísticas univariadas, como curtose e assimetria.
+ANOVA: Realiza análises de variância.
+Funções de Data/Tempo:
+
+DATEPART: Extrai partes de uma data, como dia, mês e ano.
+INTNX: Calcula datas futuras ou passadas com base em intervalos.
+FORMAT: Formata datas e horas de acordo com um formato específico.
+Funções de Controle de Fluxo:
+
+IF/THEN/ELSE: Realiza condicionais para executar ações com base em critérios.
+DO/END: Controla loops e iterações.
+SELECT/CASE: Executa ações diferentes com base em valores específicos.
+Procedimentos para Gráficos e Relatórios:
+
+PROC GPLOT: Gera gráficos de dispersão e de linhas.
+PROC SGPLOT: Gera gráficos de barras, caixas, dispersão, entre outros.
+PROC REPORT: Cria relatórios tabulares personalizados.
+PROC EXPORT: Exporta dados para diferentes formatos, como Excel, CSV, etc.
+Estas são apenas algumas das principais funções e procedimentos disponíveis no SAS Enterprise Guide. A escolha das funções e procedimentos dependerá das suas necessidades específicas de análise de dados e relatórios. O SAS oferece uma ampla variedade de recursos para realizar análises avançadas e gerar relatórios de alta qualidade.
+
+
+
+
+User
+Cite outras
+
+ChatGPT
+Certamente, aqui estão mais algumas funções e procedimentos úteis no SAS Enterprise Guide:
+
+Funções Estatísticas Avançadas:
+
+MEANS/SUMMARY: Calcula estatísticas descritivas, como média, mediana, mínimo, máximo, etc.
+REG: Realiza análises de regressão linear.
+LOGISTIC: Realiza análises de regressão logística.
+TTEST: Realiza testes t para comparar médias de dois grupos.
+GLM: Realiza análises de modelo linear geral.
+MIXED: Realiza análises de modelos mistos (análise de variância hierárquica).
+Funções de Manipulação de Texto Avançadas:
+
+COMPBL: Remove espaços em branco duplicados de uma string.
+COMPRESS: Remove caracteres específicos de uma string.
+INDEX: Encontra a posição de uma substring em uma string.
+PRXFUNC: Realiza correspondência de padrões usando expressões regulares.
+CATS/CATX/CATT: Concatena valores de variáveis com ou sem espaços.
+STRIP: Remove espaços em branco no início e no final de uma string.
+Funções de Data/Tempo Avançadas:
+
+INTCK: Calcula a diferença entre duas datas em unidades específicas (dias, meses, anos).
+INTNX: Calcula datas futuras ou passadas com base em intervalos.
+EOMONTH: Retorna o último dia do mês de uma data.
+MONTH/DAY/YEAR: Extrai partes de uma data, como mês, dia e ano.
+DATEADD: Adiciona um intervalo de tempo a uma data.
+Procedimentos para Análises Específicas:
+
+PROC SQL: Realiza consultas SQL em conjuntos de dados, permitindo junções, agregações e manipulações complexas.
+PROC TABULATE: Cria tabelas de resumo personalizadas.
+PROC TRANSPOSE: Reorganiza dados de formato longo para largo ou vice-versa.
+PROC IML: Linguagem de matriz interativa para análise numérica e estatística avançada.
+PROC PHREG: Realiza análises de sobrevivência e modelos de risco proporcional de Cox.
+
+Claro, aqui estão algumas outras funções e procedimentos no SAS Enterprise Guide que podem ser úteis:
+
+**Funções de Manipulação de Dados e Texto:**
+
+47. **COUNT:** Conta o número de observações em um conjunto de dados.
+48. **NMISS:** Conta o número de valores ausentes em variáveis.
+49. **FIRSTVAR/LASTVAR:** Identifica a primeira e a última variável em um conjunto de dados.
+50. **LENGTH:** Retorna o comprimento de uma string ou variável.
+
+**Funções Estatísticas Específicas:**
+
+51. **FREQ:** Calcula tabelas de frequência e realiza testes qui-quadrado.
+52. **PHREG:** Realiza análises de regressão de Cox para sobrevivência.
+53. **CALIS:** Realiza análises de modelagem de equações estruturais (SEM).
+
+**Funções de Formatação e Display:**
+
+54. **FORMAT:** Define e aplica formatos personalizados a variáveis.
+55. **DISPLAY:** Controla a formatação de valores em relatórios e gráficos.
+
+**Procedimentos de Gráficos e Visualizações:**
+
+56. **PROC SGPANEL:** Cria painéis de gráficos para análises em múltiplos níveis.
+57. **PROC REPORT:** Gera relatórios personalizados com mais controle sobre a formatação.
+58. **PROC TEMPLATE:** Personaliza estilos de saída e relatórios.
+
+**Procedimentos para Dados de Grandes Dimensões:**
+
+59. **PROC DS2:** Processa grandes conjuntos de dados paralelamente e eficientemente.
+60. **PROC HPDS:** Lida com conjuntos de dados grandes usando a tecnologia High-Performance Analytics.
+
+**Funções de Validação e Qualidade de Dados:**
+
+61. **DQMATCH/DQCLUSTER:** Realiza deduplicação e agrupamento de registros duplicados.
+62. **DQVERIFY:** Verifica a qualidade dos dados, como validação de endereços.
+
+Lembre-se de que a escolha das funções e procedimentos dependerá das necessidades específicas do seu projeto de análise de dados no SAS Enterprise Guide. Cada uma dessas funções e procedimentos tem um propósito diferente e pode ser aplicada em diferentes contextos de análise de dados e manipulação de dados.
+
+
+
+Concatenar campos no SAS.
+
+Default (GPT-3.5)
+
+User
+Concatenar dois campos no SAS enterprise
+
+ChatGPT
+Para concatenar dois campos no SAS Enterprise Guide, você pode usar a função CATX ou usar um operador de concatenação (&). Aqui estão exemplos de ambas as abordagens:
+
+Usando a função CATX:
+Suponha que você tenha duas variáveis chamadas "PrimeiroNome" e "Sobrenome" e queira concatená-las em uma única variável chamada "NomeCompleto". Você pode fazer o seguinte:
+
+sas
+Copy code
+data SeuDataSet;
+  set SeuDataSet; /* Substitua SeuDataSet pelo nome do seu conjunto de dados */
+  NomeCompleto = catx(' ', PrimeiroNome, Sobrenome);
+run;
+Neste exemplo, a função CATX concatena os valores de "PrimeiroNome" e "Sobrenome" com um espaço em branco como separador e armazena o resultado na variável "NomeCompleto".
+
+Usando o operador de concatenação (&):
+Outra maneira de fazer isso é usar o operador de concatenação (&). Veja como você pode fazer isso:
+
+sas
+Copy code
+data SeuDataSet;
+  set SeuDataSet; /* Substitua SeuDataSet pelo nome do seu conjunto de dados */
+  NomeCompleto = PrimeiroNome || ' ' || Sobrenome;
+run;
+Neste exemplo, usamos o operador "||" para concatenar os valores de "PrimeiroNome" e "Sobrenome", juntamente com um espaço em branco, e armazenamos o resultado na variável "NomeCompleto".
+
+Lembre-se de substituir "SeuDataSet" pelo nome do seu conjunto de dados real e ajustar os nomes das variáveis de acordo com o seu caso específico.
+
+---------------------------
+
+Funções de Manipulação de Dados:
+
+CATX: Concatena valores de variáveis com um separador especificado.
+
+TRIM: Remove espaços em branco extras de uma string.
+
+SCAN: Extrai palavras individuais de uma string.
+
+SUBSTR: Extrai uma parte de uma string com base na posição e no comprimento.
+
+UPCASE/LOWCASE: Converte texto para maiúsculas ou minúsculas.
+
+COMPRESS: Remove caracteres específicos de uma string.
+
+INPUT/PUT: Converte valores de e para diferentes formatos de dados.
+Funções Estatísticas:
+
+MEANS/SUMMARY: Calcula estatísticas descritivas, como média, mediana, mínimo, máximo, etc.
+CORR: Calcula a matriz de correlação entre variáveis.
+
+FREQ: Calcula tabelas de frequência e realiza testes qui-quadrado.
+
+UNIVARIATE: Calcula estatísticas univariadas, como curtose e assimetria.
+
+ANOVA: Realiza análises de variância.
+Funções de Data/Tempo:
+
+DATEPART: Extrai partes de uma data, como dia, mês e ano.
+
+INTNX: Calcula datas futuras ou passadas com base em intervalos.
+
+FORMAT: Formata datas e horas de acordo com um formato específico.
+Funções de Controle de Fluxo:
+
+IF/THEN/ELSE: Realiza condicionais para executar ações com base em critérios.
+
+DO/END: Controla loops e iterações.
+
+SELECT/CASE: Executa ações diferentes com base em valores específicos.
+
+
+Procedimentos para Gráficos e Relatórios:
+
+PROC GPLOT: Gera gráficos de dispersão e de linhas.
+
+PROC SGPLOT: Gera gráficos de barras, caixas, dispersão, entre outros.
+
+PROC REPORT: Cria relatórios tabulares personalizados.
+
+PROC EXPORT: Exporta dados para diferentes formatos, como Excel, CSV, etc.
+
+Funções Estatísticas Avançadas:
+
+MEANS/SUMMARY: Calcula estatísticas descritivas, como média, mediana, mínimo, máximo, etc.
+
+REG: Realiza análises de regressão linear.
+
+LOGISTIC: Realiza análises de regressão logística.
+
+TTEST: Realiza testes t para comparar médias de dois grupos.
+
+GLM: Realiza análises de modelo linear geral.
+
+MIXED: Realiza análises de modelos mistos (análise de variância hierárquica).
+
+
+Funções de Manipulação de Texto Avançadas:
+
+COMPBL: Remove espaços em branco duplicados de uma string.
+
+COMPRESS: Remove caracteres específicos de uma string.
+
+INDEX: Encontra a posição de uma substring em uma string.
+
+PRXFUNC: Realiza correspondência de padrões usando expressões regulares.
+
+CATS/CATX/CATT: Concatena valores de variáveis com ou sem espaços.
+
+STRIP: Remove espaços em branco no início e no final de uma string.
+
+
+Funções de Data/Tempo Avançadas:
+
+INTCK: Calcula a diferença entre duas datas em unidades específicas (dias, meses, anos).
+
+INTNX: Calcula datas futuras ou passadas com base em intervalos.
+
+EOMONTH: Retorna o último dia do mês de uma data.
+
+MONTH/DAY/YEAR: Extrai partes de uma data, como mês, dia e ano.
+
+DATEADD: Adiciona um intervalo de tempo a uma data.
+Procedimentos para Análises Específicas:
+
+PROC SQL: Realiza consultas SQL em conjuntos de dados, permitindo junções, agregações e manipulações complexas.
+
+PROC TABULATE: Cria tabelas de resumo personalizadas.
+
+PROC TRANSPOSE: Reorganiza dados deformato longo para largo ou vice-versa.
+PROC IML: Linguagem de matriz interativa para análise numérica e estatística avançada.
+
+PROC PHREG: Realiza análises de sobrevivência e modelos de risco proporcional de Cox.
+
+Funções de Manipulação de Dados e Texto:
+
+COUNT: Conta o número de observações em um conjunto de dados.
+
+NMISS: Conta o número de valores ausentes em variáveis.
+
+FIRSTVAR/LASTVAR: Identifica a primeira e a última variável em um conjunto de dados.
+
+LENGTH: Retorna o comprimento de uma string ou variável.
+
+Funções Estatísticas Específicas:
+
+FREQ: Calcula tabelas de frequência e realiza testes qui-quadrado.
+
+PHREG: Realiza análises de regressão de Cox para sobrevivência.
+
+CALIS: Realiza análises de modelagem de equações estruturais (SEM).
+
+Funções de Formatação e Display:
+
+FORMAT: Define e aplica formatos personalizados a variáveis.
+
+DISPLAY: Controla a formatação de valores em relatórios e gráficos.
+Procedimentos de Gráficos e Visualizações:
+
+PROC SGPANEL: Cria painéis de gráficos para análises em múltiplos níveis.
+
+PROC REPORT: Gera relatórios personalizados com mais controle sobre a formatação.
+
+PROC TEMPLATE: Personaliza estilos de saída e relatórios.
+
+Procedimentos para Dados de Grandes Dimensões:
+
+PROC DS2: Processa grandes conjuntos de dados paralelamente e eficientemente.
+
+PROC HPDS: Lida com conjuntos de dados grandes usando a tecnologia High-Performance Analytics.
+
+Funções de Validação e Qualidade de Dados:
+
+DQMATCH/DQCLUSTER: Realiza deduplicação e agrupamento de registros duplicados.
+
+DQVERIFY: Verifica a qualidade dos dados, como validação de endereços.
+
+Como selecionar apenas 100 registros da tabela
+
+Para selecionar apenas os primeiros 100 registros de uma tabela no SAS Enterprise Guide, você pode usar a cláusula FIRSTOBS em uma etapa DATA ou em uma consulta SQL. 
+
+---------------------------
+ 
+Bom case de KS:
+https://github.com/jaikushwaha7/Kolmogorov-Smirnov-Test/blob/main/Kolmogorov-Smirnov%20Test.ipynb
+
+Bom case tratamento:
+https://github.com/IvanildoBatista/Data-science/blob/master/ProjetoCenso/Classificando%20a%20renda%20de%20indiv%C3%ADduos%20de%20censo%20americano.ipynb
+
+Modelos Bench Asif do LinkedIn:
+https://github.com/datasciencescoop/SQL/blob/main/SQL%20Tutorials.ipynb
+
+Modelo Bench Jupyter:
+https://github.com/Patotricks15/Ciencia-de-dados-projetos/blob/972960d16ae81eb0f9b21960a4a92a800b4b6314/Desafio_Mutual%20-%20Patrick%20Gomes.ipynb
+
+Regressão Logística no SAS:
+https://github.com/myankshah/SAS_Credit_Scoring_Model_using_LogisticRegression/tree/master
+
+Case de KS e testes Bard:
+https://github.com/vanessaleong/CreditRiskForecasting/blob/master/Credit%20Risk%20Forecasting.ipynb
+
+Modelo Preditivo Bom Case:
+https://carlosbonfim.com/pages/Modelo_Preditivo_para_detec%C3%A7%C3%A3o_fraudes.html
